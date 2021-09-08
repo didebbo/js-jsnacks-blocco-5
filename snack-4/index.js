@@ -4,22 +4,14 @@
 
 const arr1 = ["a", "b", "c"];
 const arr2 = [1, 2, 3];
-let counter1 = 0;
-let counter2 = 0;
 const arr3 = [];
+let counter = 0;
 let toggle = false;
 
-while (counter1 < 3 || counter2 < 3) {
-    if (toggle) {
-        arr3.push(arr1[counter1]);
-        counter1++;
-        toggle = false;
-    }
-    else {
-        arr3.push(arr2[counter2]);
-        counter2++;
-        toggle = true;
-    }
+while (counter < 3) {
+    arr3.push(arr1[counter]);
+    arr3.push(arr2[counter]);
+    counter++;
 }
 
 console.log(arr3);
