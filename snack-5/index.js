@@ -6,7 +6,6 @@
 
 
 const trimArray = (array, a, b) => {
-    // if (a >= b) return [];
     if (b <= array.length) return array.slice((a - 1), b);
     return array.slice((a - 1));
 }
