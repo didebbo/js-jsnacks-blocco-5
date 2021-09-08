@@ -21,17 +21,15 @@ for (let i = 1; i <= 10; i++) {
 
 zucchine.forEach(zucchina => {
     pesoZucchine += zucchina["pesoGr"];
-    if (zucchina["pesoGr"] < 15) piccoleZucchine.push(zucchina);
-    else grandiZucchine.push(zucchina);
+    if (zucchina["pesoGr"] < 15) {
+        piccoleZucchine.push(zucchina);
+        pesoTotalePiccoleZucchine += zucchina["pesoGr"];
+    }
+    else {
+        grandiZucchine.push(zucchina);
+        pesoTotaleGrandiZucchine += zucchina["pesoGr"];
+    }
 });
-
-piccoleZucchine.forEach(zucchina => {
-    pesoTotalePiccoleZucchine += zucchina["pesoGr"];
-})
-
-grandiZucchine.forEach(zucchina => {
-    pesoTotaleGrandiZucchine += zucchina["pesoGr"];
-})
 
 console.log(zucchine);
 console.log(piccoleZucchine);
